@@ -3,7 +3,7 @@ name: docker-push
 on:
   push:
     branches:
-      - 'main'
+      - '*'
 
 jobs:
   docker:
@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: computerphilosopher/app:latest
+          tags: computerphilosopher/deploy-demo:${{github.ref_name}}
