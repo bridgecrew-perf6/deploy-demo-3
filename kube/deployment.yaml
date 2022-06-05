@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-demo
+  labels:
+    app: deploy-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: deploy-demo
+  template:
+    metadata:
+      labels:
+        app: deploy-demo
+        branch: main
+    spec:
+      containers:
+      - name: deploy-demo
+        image: computerphilosopher/deploy-demo:main
+        ports:
+        - containerPort: 80
+
