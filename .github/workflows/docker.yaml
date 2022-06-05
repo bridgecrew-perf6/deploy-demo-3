@@ -25,7 +25,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: /app
+          context: "{{defaultContext}}:app"
           file: Dockerfile
           push: true
           tags: computerphilosopher/deploy-demo:${{github.ref_name}}
