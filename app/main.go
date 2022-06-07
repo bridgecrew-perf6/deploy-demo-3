@@ -14,8 +14,10 @@ var (
 )
 
 func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	w.WriteHeader(200)
-    fmt.Fprintf(w, "Welcome to %s!\n", branch)
+	w.Header().Set("Content-Type", "text/plain")
+	resp := fmt.Sprintf("Welcome to %s!", branch)
+	w.Write([]byte(resp))
+	w.WriteHeader(http.StatusOK)
 }
 
 func main() {
