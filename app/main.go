@@ -14,6 +14,7 @@ var (
 )
 
 func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	w.WriteHeader(200)
     fmt.Fprintf(w, "Welcome to %s!\n", branch)
 }
 
