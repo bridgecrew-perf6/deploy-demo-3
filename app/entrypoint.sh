@@ -1,0 +1,1 @@
+/usr/bin/deploy-demo
