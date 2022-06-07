@@ -1,11 +1,11 @@
 {
-  "family": "task-def-for-ecs",
+  "family": "task-def-for-ecs-whatapp",
   "executionRoleArn": "ecsTaskExecutionRole",
   "networkMode": "awsvpc",
   "containerDefinitions": [
     {
       "name": "deploy-demo",
-      "image": "421809997104.dkr.ecr.ap-northeast-2.amazonaws.com/deploy-demo:main",
+      "image": "421809997104.dkr.ecr.ap-northeast-2.amazonaws.com/deploy-demo:whatapp",
       "portMappings": [
         {
           "containerPort": 8080,
