@@ -1,5 +1,5 @@
 {
-  "family": "task-def-for-ecs",
+  "family": "task-def-for-ecs-develop",
   "executionRoleArn": "ecsTaskExecutionRole",
   "networkMode": "awsvpc",
   "containerDefinitions": [
