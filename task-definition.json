@@ -1,6 +1,6 @@
 {
   "family": "task-def-for-ecs",
-  "executionRoleArn": "arn:aws:iam::421809997104:group/Admins",
+  "executionRoleArn": "ecsTaskExecutionRole",
   "networkMode": "awsvpc",
   "containerDefinitions": [
     {
