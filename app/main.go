@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	branch = "main"
+	branch = "fix"
 )
 
 func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
