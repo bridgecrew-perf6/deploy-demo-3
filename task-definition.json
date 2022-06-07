@@ -1,0 +1,24 @@
+{
+  "family": "task-def-for-ecs",
+  "executionRoleArn": "arn:aws:iam::421809997104:group/Admins",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "deploy-demo",
+      "image": "421809997104.dkr.ecr.ap-northeast-2.amazonaws.com/deploy-demo:main",
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "512",
+  "memory": "1024"
+}
